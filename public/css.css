@@ -1,0 +1,9 @@
+.form-group {
+    width: 50%;
+}
+.form {
+    margin: 50px 50px auto;
+}
+body {
+    background-color: rgb(32, 127, 172) !important;
+}
