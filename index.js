@@ -1,6 +1,7 @@
 require('./controllers/controller_passport')
 const express = require('express')
 const app = express()
+app.listen(process.env.PORT)
 const passport = require('passport')
 const expressSession = require('express-session')
 const cookieParser = require('cookie-parser')
@@ -58,8 +59,4 @@ app.post('/admin/statisify', passport.authenticate('admin', {failureRedirect: '/
 
 app.get('/admin', passport.authenticate('admin', {failureRedirect: '/'}), (req, res) => {
     res.render('admin_ui')
-})
-
-app.listen(4000 || process.env.PORT, () => {
-    console.log('App running')
 })
